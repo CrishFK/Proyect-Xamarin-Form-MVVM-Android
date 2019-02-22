@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TheTrooper_MVVM_CrishFK.View.ViewTrooper"
+             Title="Briefing">
+    <StackLayout >
+
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="506"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" x:Name="id" FontSize="Large" Text="{Binding Id}" Margin="12" FontAttributes="Bold"/>
+
+            <Label Grid.Row="1" x:Name="Name" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" FontSize="Large" 
+                   Text="{Binding Name}" TextColor="{Binding TextColor}" BackgroundColor="{Binding BackColor}" 
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+            <Button Grid.Row="2" x:Name="btSend" VerticalOptions="StartAndExpand" BackgroundColor="Gray"
+                    Text="SEND MISSION"  Clicked="btSend_Clicked"></Button>
+
+        </Grid>
+        
+    </StackLayout>
+</ContentPage>

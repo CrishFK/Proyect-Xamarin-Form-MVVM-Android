@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TheTrooper_MVVM_CrishFK"
+             x:Class="TheTrooper_MVVM_CrishFK.MainPage">
+
+    <ContentPage Title="FAIL">
+        <StackLayout Margin="10">
+            <ListView x:Name="listLow" ItemSelected="List_ItemSelected" ItemsSource="{Binding ListLow}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="17" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding Id}" Grid.Column="0" Grid.Row="1" FontAttributes="Bold" />
+                                <Label Text="Name" Grid.Column="1" Grid.Row="0" FontAttributes="Bold" />
+                                <Label Text="{Binding Name}" Grid.Column="1" Grid.Row="1"/>
+                                <Label Text="{Binding Accuracy}" Grid.Column="1" Grid.Row="0" HorizontalOptions="EndAndExpand" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage>
+
+    <ContentPage Title="MID LEVEL">
+        <StackLayout Margin="10">
+            <ListView x:Name="listMid" ItemSelected="List_ItemSelected" ItemsSource="{Binding ListMid}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell >
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="17" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding Id}" Grid.Column="0" Grid.Row="1" FontAttributes="Bold" />
+                                <Label Text="Name" Grid.Column="1" Grid.Row="0" FontAttributes="Bold" />
+                                <Label Text="{Binding Name}" Grid.Column="1" Grid.Row="1"/>
+                                <Label Text="{Binding Accuracy}" Grid.Column="1" Grid.Row="0" HorizontalOptions="EndAndExpand" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage>
+
+    <ContentPage Title="HIGH LEVEL">
+        <StackLayout Margin="10">
+            <ListView x:Name="listHigh" ItemSelected="List_ItemSelected" ItemsSource="{Binding ListHigh}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell >
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="17" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding Id}" Grid.Column="0" Grid.Row="1" FontAttributes="Bold" />
+                                <Label Text="Name" Grid.Column="1" Grid.Row="0" FontAttributes="Bold" />
+                                <Label Text="{Binding Name}" Grid.Column="1" Grid.Row="1"/>
+                                <Label Text="{Binding Accuracy}" Grid.Column="1" Grid.Row="0" HorizontalOptions="EndAndExpand" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage>
+
+</TabbedPage>
